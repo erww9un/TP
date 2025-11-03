@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tp12.css">
+     <script src="tp12.js"></script>
+</head>
+<body>
+    <div class="facture">
+        <div class="header">
+            <img src="https://logo-marque.com/wp-content/uploads/2021/03/Fnac-Logo.png" width="800" height="200">
+            <div>
+            <p><b>Date création :</b> 15/11/22</p>
+            <p><b>N° Facture :</b></p>
+        </div>
+    </div>
+    <div class="section">
+        <div>
+            <h3>Destinataire</h3>
+            <p>Nom<br>Nom de la société<br>Adresse Postale<br>Téléphone<br>Email</p>
+        </div>
+        <div>
+            <h3>Envoyer à</h3>
+            <p>Nom
+                <br>Nom de la société
+                <br>Adresse Postale
+                <br>Téléphone
+                <br>Email</p>
+        </div>
+    </div>
+<table>
+        <tr>
+            <th>Article</th>
+            <th>Quantité</th>
+            <th>Prix</th>
+            <th>Résultat</th>
+        </tr>
+        <tr>
+            <td><input id="a1" ></td>
+            <td><input id="q1" ></td>
+            <td><input id="p1" ></td>
+            <td><input id="r1" readonly></td>
+        </tr>
+        <tr>
+            <td><input id="a2" ></td>
+            <td><input id="q2" ></td>
+            <td><input id="p2" ></td>
+            <td><input id="r2" readonly></td>
+        </tr>
+        <tr>
+            <td><input id="a3" ></td>
+            <td><input id="q3" ></td>
+            <td><input id="p3" ></td>
+            <td><input id="r3" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="3"><button onclick="reinit()">Réinitialiser</button>
+                <button onclick="calculer()">Résultat</button></td>
+            <td><input id="total" readonly></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
