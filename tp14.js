@@ -70,8 +70,9 @@ function addLigne() {
     //Récupérer la reference du tableau
     var name = document.getElementById("nom").value;
     var age = document.getElementById("age").value;
+    var prenom = document.getElementById("prenom").value;
 
-    if (name == "" || age == "") {
+    if (name == "" || age == "" || prenom == "") {
         alert("un des deux éléments n'est pas complet ou valide");
     }
     else if (age < 10 || age > 20) {
@@ -80,10 +81,14 @@ function addLigne() {
     else {
         var table = document.getElementById("myTable");
         var newRow = table.insertRow(-1);
+
         var cell1 = newRow.insertCell(0);
         var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+
         cell1.innerHTML = name;
         cell2.innerHTML = age;
+        cell3.innerHTML = prenom;
     }
 
 }
