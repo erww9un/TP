@@ -1,45 +1,57 @@
 body {
-    font-family: Verdana, Calibri, sans-serif;
-    margin: 0px;
-    padding: 0px;
+  font-family: Verdana, Calibri, sans-serif;
+  margin: 0px;
+  padding: 0px;
 }
 
-nav > ul{
-    margin: 0px;
-    padding: 0px;
+/* On utilise ">" pour ne cibler que la liste ul qui 
+   est un enfant direct de nav */
+nav > ul {
+  margin: 0px;
+  padding: 0px;
 }
 
-nav li{
+/*On enlève les puces devant tous les éléments li 
+*appartenant à notre élément nav*/
+nav li {
     list-style-type: none;
 }
 
-nav > ul > li{
+/*On affiche seulement les éléments li correspondant à 
+*nos onglets de menu en ligne (côte à côte)*/
+nav > ul > li {
     float: left;
 }
 
-.submenu{
+/*Les sous-onglets du menu ne doivent pas être visibles par défaut*/
+.submenu {
     display: none;
 }
 
+/*On rend notre case à cocher invisible*/
 nav input[type=checkbox] {
     display: none;
 }
 
-.menu-mobile{
+/*On cache le bouton affichant le menu mobile*/
+.menu-mobile {
     display: none;
 }
 
-nav{
+nav {
     width: 100%;
     background-color: #424558;
 }
 
-nav > ul > li{
+/*On affiche seulement les éléments li correspondant à 
+*nos onglets de menu en ligne (côte à côte)*/
+nav > ul > li {
     float: left;
     position: relative;
 }
 
-nav > ul::after{
+/*Un "hack" CSS (clearfix) très connu*/
+nav > ul::after {
     content: "";
     display: table;
     clear: both;
@@ -48,11 +60,12 @@ nav > ul::after{
 nav a{
     display: inline-block;
     text-decoration: none;
+
 }
 
 nav > ul > li > a{
     padding: 20px 30px;
-    color: #FFF;
+    color: #FFF
 }
 
 nav li:hover .submenu{
@@ -64,6 +77,10 @@ nav li:hover .submenu{
     z-index: 100000;
 }
 
+.submenu li{
+    border-bottom: 1px solid #ccc;
+}
+
 .submenu li a{
     padding: 15px 30px;
     font-size: 13px;
@@ -71,64 +88,143 @@ nav li:hover .submenu{
     width: 270px;
 }
 
-nav > ul > li:hover a {
+.menu-html:hover{
+    border-top: 5px solid #e44d26;
+    background-color: RGBA(228, 77, 38, 0.15);
+}
+
+.menu-js:hover {
+    border-top: 5px solid #f1dc4f;
+    background-color: RGBA(241, 211, 79, 0.15);
+}
+.menu-bdd:hover{
+    border-top: 5px solid #316015;
+    background-color: RGBA(102, 199, 46,0.15);
+}
+.menu-php:hover{
+    border-top: 5px solid #3f34cf;
+    background-color: RGBA(53, 47, 194, 0.15);
+}
+.menu-missions:hover{
+    border-top: 5px solid #D936D9;
+    background-color: RGBA(255, 105, 180, 0.15);
+}
+.menu-certif:hover {
+    border-top: 5px solid #FFFF00;
+    background-color: RGBA(255, 215, 0, 0.15);
+}
+.menu-contact:hover {
+    border-top: 5px solid #BBB;
+    background-color: RGBA(220, 220, 220, 0.15);
+}
+
+nav > ul > li:hover {
     padding: 15px 30px 20px 30px;
 }
 
 .menu-html .submenu {
     background-color: RGB(230, 100, 40);
 }
-
-.menu-css .submenu {
-    background-color: RGB(000, 160, 240);
-}
-
 .menu-js .submenu {
     background-color: RGB(251, 216, 99);
 }
-
+.menu-bdd .submenu {
+    background-color: #9FE279;
+}
+.menu-missions .submenu {
+    background-color: RGB(219, 112, 147);
+}
 .submenu li:hover a {
     color: #EEE;
     font-weight: bold;
 }
-
 .menu-html .submenu li:hover {
     background-color: RGB(210, 77, 60);
 }
-
-.menu-css .submenu li:hover {
-    background-color: RGB(000, 115, 200);
-}
-
 .menu-js .submenu li:hover {
     background-color: RGB(200, 165, 75);
 }
+.menu-bdd .submenu li:hover {
+    background-color: #85D954;
+}
+.menu-missions .submenu li:hover {
+    background-color: #C71585;
+}
 
+/*Lorsque la case est cochée (dès qu'un utilisateur appuie sur notre bouton), le menu entier s'affiche*/
 nav input[type=checkbox]:checked ~ ul{
     display: block;
 }
 
-@media screen and (max-width : 680px){
-    .menu-mobile {
-        display: block;
-        color: #FFF;
-        background-color: rgba(29, 197, 151, 0.97);
-        text-align: center;
-        padding: 12px 0;
-    }
-    nav ul{
-        display: none;
-    }
-}
+/* MENU RESPONSIVE */
+@media screen and (max-width: 680px) {
 
-nav ul li, nav ul li a {
-    width: 100%;
-    text-align: center;
-}
-nav ul li a, nav ul li:hover a{
-    padding: 10px 0px 10px 0px;
-}
-nav li:hover .submenu{
-    display: block;
-    position: static;
-}
+    /* Bouton du menu mobile */
+    .menu-mobile {
+      display: block;
+      color: #fff;
+      background-color: rgba(29, 197, 151, 0.97);
+      text-align: center;
+      padding: 15px 0;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  
+    /* On cache le menu par défaut */
+    nav ul {
+      display: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  
+    /* Quand le bouton (checkbox) est coché → afficher le menu */
+    nav input[type=checkbox]:checked ~ ul {
+      display: block;
+    }
+  
+    /* Chaque élément du menu occupe toute la largeur */
+    nav ul li {
+      float: none;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    nav ul li a {
+      display: block;
+      padding: 15px 0;
+      color: #fff;
+    }
+  
+    /* Sous-menus visibles directement en bloc vertical */
+    .submenu {
+      display: block;
+      position: static;
+      background: none;
+      padding: 0;
+    }
+  
+    .submenu li {
+      width: 100%;
+    }
+  
+    .submenu li a {
+      display: block;
+      padding: 10px 0;
+      color: #222538;
+      font-size: 14px;
+    }
+  
+    /* Couleurs de fond similaires à ta capture */
+    .menu-html { background-color: #2c2f3a; }
+    .menu-css { background-color: #2c2f3a; }
+    .menu-js { background-color: #d3b04d; }
+    .menu-js .submenu { background-color: #f7d95c; }
+    .menu-contact { background-color: #2c2f3a; }
+  
+    /* Supprime le survol en desktop inutile sur mobile */
+    nav li:hover .submenu {
+      display: block;
+    }
+  }
