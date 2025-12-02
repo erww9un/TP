@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QCM BTS SIO - Football</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <header>
+        BTS SIO Lycée Parc de Vilgénis
+    </header>
+
+    <h2>Questionnaire sous forme de QCM. Les questions peuvent comporter une ou plusieurs bonnes réponses.</h2>
+
+    <form name="monQCM">
+
+        <div class="question-block">
+            <span class="question-title">Question 1 :</span>
+            Qui a gagné le Ballon d'Or 2025<br>
+            <input type="checkbox" id="q1_a"> Kylian Mbappé<br>
+            <input type="checkbox" id="q1_b"> Lionel Messi<br>
+            <input type="checkbox" id="q1_c"> Ousmane Dembélé<br>
+            <input type="checkbox" id="q1_d"> Lamine Yamal<br>
+        </div>
+
+        <div class="question-block">
+            <span class="question-title">Question 2 :</span>
+            Quel joueur joue pour la séléction portugaise<br>
+            <input type="checkbox" id="q2_a"> Vitinha<br>
+            <input type="checkbox" id="q2_b"> Neymar JR<br>
+            <input type="checkbox" id="q2_c"> Kevin de Bruyne<br>
+        </div>
+
+        <div class="question-block">
+            <span class="question-title">Question 3 :</span>
+            Quel joueur a déjà gagné une Coupe du Monde<br>
+            <input type="checkbox" id="q3_a"> Neymar JR<br>
+            <input type="checkbox" id="q3_b"> Samuel Umtiti<br>
+            <input type="checkbox" id="q3_c"> Eden Hazard<br>
+            <input type="checkbox" id="q3_d"> Toni Kroos<br>
+            <input type="checkbox" id="q3_e"> Cristiano Ronaldo<br>
+        </div>
+
+        <div class="question-block">
+            <span class="question-title">Question 4 :</span>
+            Combien de temps dure un match de football standard (hors temps additionnel) ?<br>
+            <input type="checkbox" id="q4_a"> 45 minutes.<br>
+            <input type="checkbox" id="q4_b"> 60 minutes.<br>
+            <input type="checkbox" id="q4_c"> 90 minutes.<br>
+            <input type="checkbox" id="q4_d"> 100 minutes.<br>
+        </div>
+
+        <div class="question-block">
+            <span class="question-title">Question 5 :</span>
+            En quelles années l'équipe de France a-t-elle gagné la Coupe du Monde (plusieurs réponses) ?<br>
+            <input type="checkbox" id="q5_a"> 1998.<br>
+            <input type="checkbox" id="q5_b"> 2006.<br>
+            <input type="checkbox" id="q5_c"> 2018.<br>
+            <input type="checkbox" id="q5_d"> 2022.<br>
+        </div>
+
+        <div class="question-block">
+            <span class="question-title">Question 6 :</span>
+            Quel joueur a remporté le plus de Ballons d'Or dans l'histoire ?<br>
+            <input type="checkbox" id="q6_a"> Cristiano Ronaldo.<br>
+            <input type="checkbox" id="q6_b"> Lionel Messi.<br>
+            <input type="checkbox" id="q6_c"> Zinedine Zidane.<br>
+            <input type="checkbox" id="q6_d"> Kylian Mbappé.<br>
+        </div>
+
+        <div class="question-block">
+            <span class="question-title">Question 7 :</span>
+            Que se passe-t-il si un joueur reçoit un carton rouge ?<br>
+            <input type="checkbox" id="q7_a"> Il est exclu du match définitivement.<br>
+            <input type="checkbox" id="q7_b"> Il est exclu pendant 10 minutes.<br>
+            <input type="checkbox" id="q7_c"> Il reçoit un simple avertissement.<br>
+            <input type="checkbox" id="q7_d"> L'équipe adverse gagne un but automatiquement.<br>
+        </div>
+
+        <div class="question-block">
+            <span class="question-title">Question 8 :</span>
+            Combien de joueurs y a-t-il sur le terrain pour une équipe au début du match ?<br>
+            <input type="checkbox" id="q8_a"> 7 joueurs.<br>
+            <input type="checkbox" id="q8_b"> 10 joueurs.<br>
+            <input type="checkbox" id="q8_c"> 11 joueurs.<br>
+            <input type="checkbox" id="q8_d"> 15 joueurs.<br>
+        </div>
+
+        <div class="question-block">
+            <span class="question-title">Question 9 :</span>
+            Quel club espagnol détient le record de victoires en Ligue des Champions ?<br>
+            <input type="checkbox" id="q9_a"> FC Barcelone.<br>
+            <input type="checkbox" id="q9_b"> Atlético de Madrid.<br>
+            <input type="checkbox" id="q9_c"> Real Madrid.<br>
+            <input type="checkbox" id="q9_d"> Valence CF.<br>
+        </div>
+
+        <div class="question-block">
+            <span class="question-title">Question 10 :</span>
+            Où se situe le Stade de France ?<br>
+            <input type="checkbox" id="q10_a"> Paris (intra-muros).<br>
+            <input type="checkbox" id="q10_b"> Saint-Denis.<br>
+            <input type="checkbox" id="q10_c"> Marseille.<br>
+            <input type="checkbox" id="q10_d"> Lyon.<br>
+        </div>
+
+        <div class="buttons">
+            <input type="button" value="Correction" onclick="testqcm()">
+            <input type="reset" value="Effacer">
+            <input type="button" value="Corrigé" onclick="ouvrirCorrige()">
+        </div>
+
+    </form>
+
+    <script src="quiz.js"></script>
+
+</body>
+</html>
